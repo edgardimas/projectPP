@@ -1,3 +1,7 @@
+const {User, UsersDetail} = require('./models');
+
+// console.log(UsersDetail)
+
 //npx sequelize-cli model:generate --name Product --attributes productname:string,stock:string,price:string,description:text
 
 //npx sequelize-cli model:generate --name Transactions --attributes UserId:integer,ProductsId:integer
@@ -10,13 +14,28 @@
 
 //npx sequelize-cli migration:generate --name add-fk-to-
 
-const fs = require('fs');
+// const fs = require('fs');
 
-let data = JSON.parse(fs.readFileSync('./data.json'))
+// let data = JSON.parse(fs.readFileSync('./data.json'))
 
-data.forEach(x => {
-    x.UpdatedAt = new Date(),
-    x.CreatedAt = new Date()
-});
+// data.forEach(x => {
+//     x.UpdatedAt = new Date(),
+//     x.CreatedAt = new Date()
+// });
 
-console.log(data)
+//return Product.create({title: 'Chair', user: {}}, {include: [{association: Product.User,include: [ User.Addresses ]}]})
+    ;
+
+    // User.findAll({
+    //     include: [
+    //         { 
+    //             model: UsersDetail
+    //         }
+    //     ]
+    // })
+    // .then (result => {
+    //     console.log(result)
+    // })
+    // .catch (err => {
+    //     console.log(err)
+    // })

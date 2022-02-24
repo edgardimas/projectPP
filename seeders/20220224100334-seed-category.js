@@ -13,8 +13,6 @@ module.exports = {
    up (queryInterface, Sequelize) {
   
 
-     console.log(data)
-
      return queryInterface.bulkInsert('Categories', data, {})
   },
 

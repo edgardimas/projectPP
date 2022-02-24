@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add product</title>
+</head>
+<body>
+    <form action="/products/add" method="post">
+        <div>
+            <label for="productname">product name:</label><br>
+            <input type="text" name="productname"><br>
+        </div>
+        <div>
+            <label for="productPicture">picture:</label><br>
+            <input type="url" name="productPicture"><br>
+        </div>
+        <div>
+            <label for="lname">description:</label><br>
+            <input type="text" name="description">
+        </div>
+        <div>
+            <label for="stock">lot of stock:</label><br>
+            <input type="number" name="stock">
+        </div>
+        <div>
+            <label for="role">Category:</label>
+            <select name="CategoryId">
+                <option value="1">Gundam</option>
+                <option value="2">Lego</option>
+                <option value="3">Hot Weels</option>
+                <option value="4">Barbie</option>
+                <option value="5">Nerf</option>
+                <option value="6">Yoyo</option>
+                <option value="7">Rubik</option>
+                <option value="8">Spirit Doll</option>
+            </select>
+        </div>
+    </form>
+</body>
+</html>

@@ -12,7 +12,6 @@ let data = JSON.parse(fs.readFileSync('./productData.json'))
 
 module.exports = {
    up (queryInterface, Sequelize) {
-    console.log(data)
 
     return queryInterface.bulkInsert('Products', data, {})
   },

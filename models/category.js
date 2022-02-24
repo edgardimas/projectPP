@@ -11,7 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Startup.belongsTo(models.Incubator, {foreignKey: "CategoryId"})
+   // Category.belongsToMany(models.Product, { through: 'Transaction', foreignKey: "CategoryId" });
+   Category.hasMany(models.Product, { foreignKey: "CategoryId" })
     }
   }
   Category.init({
