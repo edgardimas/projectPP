@@ -17,7 +17,7 @@ module.exports = {
     });
 
     
-
+//test
   },
 
    down (queryInterface, Sequelize) {
