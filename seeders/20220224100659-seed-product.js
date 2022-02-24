@@ -1,4 +1,5 @@
 'use strict';
+
 const fs = require('fs');
 let data = JSON.parse(fs.readFileSync('./productData.json'))
 
@@ -11,17 +12,14 @@ let data = JSON.parse(fs.readFileSync('./productData.json'))
 
 module.exports = {
    up (queryInterface, Sequelize) {
-
-     console.log(data)
+    console.log(data)
 
     return queryInterface.bulkInsert('Products', data, {})
-
   },
 
    down (queryInterface, Sequelize) {
 
-     return queryInterface.bulkDelete('Products', data, {})
-  }
 
-  
+     return queryInterface.bulkDelete('Products', {})
+  }
 };
