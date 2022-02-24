@@ -4,6 +4,7 @@
 
 //npx sequelize-cli model:generate --name Users --attributes name:string,password:string,email:string,Role:string
 
+<<<<<<< HEAD
 //npx sequelize-cli model:generate --name UsersDetails --attributes profilePict:string
 
 //npx sequelize-cli migration:generate --name add-fk-to-product
@@ -20,3 +21,14 @@ data.forEach(x => {
 });
 
 console.log(data)
+=======
+//npx sequelize-cli model:generate --name UsersDetail --attributes profilePict:string,UsersId:integer
+
+//npx sequelize-cli model:generate --name Category --attributes name:string
+
+//npx sequelize-cli migration:generate --name add-fk-to-product
+
+//npx sequelize-cli migration:generate --name add-fk-to-product
+
+//test
+>>>>>>> 17939beb3dbadb1d3ee618834df3ea0506fe39bd
