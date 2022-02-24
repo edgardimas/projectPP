@@ -15,7 +15,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   UsersDetail.init({
-    profilePict: DataTypes.STRING
+    profilePict: DataTypes.STRING,
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE
   }, {
     sequelize,
     modelName: 'UsersDetail',

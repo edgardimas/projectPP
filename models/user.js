@@ -1,4 +1,7 @@
 'use strict';
+
+var bcryptjs = require('bcryptjs');
+
 const {
   Model
 } = require('sequelize');
@@ -19,8 +22,18 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     password: DataTypes.STRING,
     email: DataTypes.STRING,
-    Role: DataTypes.STRING
+    Role: DataTypes.STRING,
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE
   }, {
+    hooks: {
+      beforeCreate(instance, options){
+        //console.log(instance, '<<<<di before create')
+        var salt = bcryptjs.genSaltSync(10);
+        var hash = bcryptjs.hashSync(instance.password, salt); 
+        instance.password = hash
+      }
+    },
     sequelize,
     modelName: 'User',
   });
